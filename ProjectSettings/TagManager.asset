@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Monster
+  - wall
+  - belowwall
+  - bomb
+  - life
   layers:
   - Default
   - TransparentFX
@@ -13,10 +18,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - wall
+  - monster
+  - bomb
   - 
   - 
   - 
@@ -40,4 +45,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 2268450899
+    locked: 0
+  - name: middleground
+    uniqueID: 1072110661
+    locked: 0
+  - name: foreground
+    uniqueID: 2991202523
     locked: 0
