@@ -11,11 +11,11 @@ public class MonsterSpawner : MonoBehaviour {
     // Use this for initialization
     void Start () {
      
-    /*     if (AudioManager.instance.background == true)
+        if (AudioManager.instance.background == true)
         {
             AudioManager.instance.Play("game");
         }
-   */     
+        
     }
 	
 	// Update is called once per frame

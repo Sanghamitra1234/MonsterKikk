@@ -41,32 +41,29 @@ public class HandTouch : MonoBehaviour {
             Collider2D collider = col.gameObject.GetComponent<Collider2D>();
             Destroy(collider);
             ScoreManager.instance.incrementScore();
-            /*    if (AudioManager.instance.sfx == true)
-                {
-                    AudioManager.instance.Play("bubblepop");
-                }
-
-        */
+            if (AudioManager.instance.sfx == true)
+            {
+                AudioManager.instance.Play("monsterpop");
+            }
             //  Destroy(col.gameObject, time);
             Destroy(col.gameObject);
         }
         if (col.gameObject.tag == "bomb")
         {
       //      col.gameObject.GetComponent<Animator>().Play("bomb explosion");
-       /*     if (AudioManager.instance.sfx == true)
+            if (AudioManager.instance.sfx == true)
             {
                 AudioManager.instance.Play("bomb");
             }
-       */     Destroy(col.gameObject, 1f);
+            Destroy(col.gameObject, 1f);
             Invoke("GameOver", 0.5f);
         }
         if (col.gameObject.tag == "life")
         {
-            /*     if (AudioManager.instance.sfx == true)
-                 {
-                     AudioManager.instance.Play("happy object");
-                 }
-            */
+            if (AudioManager.instance.sfx == true)
+            {
+                AudioManager.instance.Play("life");
+            }
             Destroy(col.gameObject);
             LifeManager.instance.incrementLife();
         }

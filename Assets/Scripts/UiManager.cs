@@ -58,11 +58,11 @@ public class UiManager : MonoBehaviour {
 
     public void Replay()
     {
-        /*   if (AudioManager.instance.sfx == true)
-           {
-               AudioManager.instance.PlayButton("buttonclick");
-           }
-        */
+        if (AudioManager.instance.sfx == true)
+        {
+            AudioManager.instance.PlayButton("buttonclick");
+        }
+       
         if (Time.timeScale == 0)
         {
             Time.timeScale = 1;
@@ -73,15 +73,19 @@ public class UiManager : MonoBehaviour {
     }
     public void OnApplicationQuit()
     {
-        /*   if (AudioManager.instance.sfx == true)
-           {
-               AudioManager.instance.PlayButton("buttonclick");
-           }
-       */
+        if (AudioManager.instance.sfx == true)
+        {
+            AudioManager.instance.PlayButton("buttonclick");
+        }
+       
         Application.Quit();
     }
     public void MainMenu()
     {
+        if (AudioManager.instance.sfx == true)
+        {
+            AudioManager.instance.PlayButton("buttonclick");
+        }
         if (Time.timeScale == 0)
         {
             Time.timeScale = 1;
@@ -90,15 +94,15 @@ public class UiManager : MonoBehaviour {
     }
     public void PauseGame()
     {
-        /*   if (AudioManager.instance.sfx == true)
-           {
-               AudioManager.instance.PlayButton("buttonclick");
-           }
-           if (AudioManager.instance.background == true)
-           {
-               AudioManager.instance.Pause("game");
-           }
-        */
+        if (AudioManager.instance.sfx == true)
+        {
+            AudioManager.instance.PlayButton("buttonclick");
+        }
+        if (AudioManager.instance.background == true)
+        {
+            AudioManager.instance.Pause("game");
+        }
+       
         PauseButton.SetActive(false);
         Time.timeScale = 0;
         PausePanel.SetActive(true);
@@ -107,15 +111,15 @@ public class UiManager : MonoBehaviour {
     }
     public void PlayPausedGame()
     {
-        /*     if (AudioManager.instance.sfx == true)
-             {
-                 AudioManager.instance.PlayButton("buttonclick");
-             }
-             if (AudioManager.instance.background == true)
-             {
-                 AudioManager.instance.ResumeAudio("game");
-             }
-        */
+        if (AudioManager.instance.sfx == true)
+        {
+            AudioManager.instance.PlayButton("buttonclick");
+        }
+        if (AudioManager.instance.background == true)
+        {
+            AudioManager.instance.ResumeAudio("game");
+        }
+        
         PauseButton.SetActive(true);
         Time.timeScale = 1;
         PausePanel.SetActive(false);

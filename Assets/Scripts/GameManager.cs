@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour {
     }
     public void gameStart()
     {
-        Debug.Log("GameManager - gamestart()");
         GameObject.Find("MonsterSpawner").GetComponent<MonsterSpawner>().StartSpawingMonsters();
 
     }
@@ -49,15 +48,14 @@ public class GameManager : MonoBehaviour {
         DifficultyManager.instance.difficulty = 1;
         //stop score not added
         gameOver = true;
-        /*      if (AudioManager.instance.sfx == true)
-            {
-                AudioManager.instance.Play("gameover");
-            }
-            if (AudioManager.instance.background == true)
-            {
-                AudioManager.instance.Stop("game");
-            }
-        */
+            if (AudioManager.instance.sfx == true)
+        {
+            AudioManager.instance.Play("gameover");
+        }
+        if (AudioManager.instance.background == true)
+        {
+            AudioManager.instance.Stop("game");
+        }
         GameObject.Find("MonsterSpawner").GetComponent<MonsterSpawner>().StopSpawningMonsters();
         UiManager.instance.GameOver();
 
